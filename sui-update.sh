@@ -1,11 +1,11 @@
 #!/bin/bash
 
-crg=${which cargo}
+source $HOME/.cargo/env
 
 cd /root/solana/sui/
 git fetch upstream
 git checkout -B testnet --track upstream/testnet
-${crg} build --release -p sui-node -p sui
+cargo build --release -p sui-node -p sui
 sui-node --version
 mv target/release/sui-node /usr/local/bin/
 mv target/release/sui /usr/local/bin/
