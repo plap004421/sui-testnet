@@ -11,4 +11,4 @@ mv target/release/sui-node /usr/local/bin/
 mv target/release/sui /usr/local/bin/
 sui-node --version
 
-#systemctl stop solana && systemctl restart suid.service && systemctl restart solana.service
+systemctl stop solana && systemctl restart suid.service && systemctl restart solana.service
