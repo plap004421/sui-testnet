@@ -1,5 +1,6 @@
 #!/bin/bash
 
+  cd /root/solana/
   git fetch upstream
   git checkout -B testnet --track upstream/testnet
 
