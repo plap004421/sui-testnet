@@ -1,9 +1,10 @@
 #!/bin/bash
 
 SUIFOLDER = $1
+check = $2
 
 cd ${SUIFOLDER}
-git checkout $2
+git checkout ${check}
 
 cargo build --release -p sui-node -p sui
 sui-node --version
