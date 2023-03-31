@@ -4,7 +4,8 @@ SUIFOLDER = $1
 check = $2
 
 cd ${SUIFOLDER}
-git checkout ${check}
+git fetch upstream
+git checkout -B testnet --track upstream/testnet
 
 cargo build --release -p sui-node -p sui
 sui-node --version
